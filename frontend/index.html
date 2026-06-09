@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Athens Vision AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav>
+            <h1>White Athens Vision AI</h1>
+        </nav>
+
+        <section class="hero">
+
+            <h2>AI Powered Image Analysis</h2>
+
+            <p>
+                Detect faces, objects, and text from images using AI.
+            </p>
+
+        </section>
+
+        <section class="upload-section">
+
+            <input type="file" id="imageInput">
+
+            <select id="analysisType">
+
+    <option value="faces">Face Detection</option>
+
+    <option value="objects">Object Detection</option>
+
+    <option value="text">OCR/Text Detection</option>
+
+    <option value="moderation">Moderation Check</option>
+
+    <option value="celebrity">Celebrity Detection</option>
+
+</select>
+
+            <button id="analyzeBtn">
+                Analyze Image
+            </button>
+
+        </section>
+
+        <section class="preview-section">
+
+            <img id="previewImage" src="" alt="Image Preview">
+
+        </section>
+
+        <section class="result-section">
+
+            <h3>Results</h3>
+
+            <div id="results">
+
+                AI analysis results will appear here.
+
+            </div>
+
+        </section>
+
+    </div>
+    </section>
+
+<section class="features-section">
+
+    <h3>Project Features</h3>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            ✔ Face Detection
+        </div>
+
+        <div class="feature-card">
+            ✔ Object Detection
+        </div>
+
+        <div class="feature-card">
+            ✔ OCR/Text Detection
+        </div>
+
+        <div class="feature-card">
+            ✔ Celebrity Recognition
+        </div>
+
+        <div class="feature-card">
+            ✔ Moderation Check
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+<footer>
+    Built with ❤️ using AI and AWS Rekognition
+</footer>
+</body>
+</html>
