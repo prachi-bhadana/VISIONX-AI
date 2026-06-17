@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Athens Vision AI</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,100 +13,89 @@
     <div class="container">
 
         <nav>
-            <h1>White Athens Vision AI</h1>
+            <h1> Vision AI</h1>
         </nav>
 
         <section class="hero">
-
             <h2>AI Powered Image Analysis</h2>
-
-            <p>
-                Detect faces, objects, and text from images using AI.
-            </p>
-
+            <p>Detect faces, emotions, objects, and text from images using AI.</p>
         </section>
 
         <section class="upload-section">
 
-            <input type="file" id="imageInput">
+            <!-- PRIMARY IMAGE -->
+            <input type="file" id="imageInput" accept="image/*">
 
-            <select id="analysisType">
-
-    <option value="faces">Face Detection</option>
-
-    <option value="objects">Object Detection</option>
-
-    <option value="text">OCR/Text Detection</option>
-
-    <option value="moderation">Moderation Check</option>
-
-    <option value="celebrity">Celebrity Detection</option>
-
-</select>
-
-            <button id="analyzeBtn">
-                Analyze Image
-            </button>
-
-        </section>
-
-        <section class="preview-section">
-
-            <img id="previewImage" src="" alt="Image Preview">
-
-        </section>
-
-        <section class="result-section">
-
-            <h3>Results</h3>
-
-            <div id="results">
-
-                AI analysis results will appear here.
-
+            <!-- SECOND IMAGE (face comparison only) -->
+            <div id="secondImageWrap" style="display:none;">
+                <p style="color:#a0cfff; font-size:14px; margin-bottom:8px;">
+                    📌 Upload second image to compare
+                </p>
+                <input type="file" id="imageInput2" accept="image/*">
             </div>
 
+            <!-- DROPDOWN -->
+            <select id="analysisType">
+                <option value="faces">😊 Face Analysis — Age, Gender, Emotion</option>
+                <option value="objects">📦 Object Detection</option>
+                <option value="text">📝 OCR / Text Detection</option>
+                <option value="moderation">🛡 Moderation Check</option>
+                <option value="celebrity">⭐ Celebrity Recognition</option>
+                <option value="compare">🔍 Face Comparison</option>
+                <option value="verify-age">🎂 Age Verification</option>
+            </select>
+
+            <!-- MIN AGE INPUT (age verify only) -->
+            <div id="ageInputWrap" style="display:none;">
+                <label style="color:#a0cfff; font-size:14px;">
+                    Minimum Age Required:
+                </label>
+                <input type="number" id="minAge" value="18" min="1" max="120"
+                    style="width:100px; margin-left:10px;">
+            </div>
+
+            <button id="analyzeBtn">🔍 Analyze Image</button>
+
+        </section>
+
+        <!-- IMAGE PREVIEWS -->
+        <section class="preview-section">
+            <img id="previewImage" src="" alt="Image Preview">
+            <img id="previewImage2" src="" alt="Second Image Preview">
+        </section>
+
+        <!-- RESULTS -->
+        <section class="result-section">
+            <h3>Results</h3>
+            <div id="results">
+                AI analysis results will appear here.
+            </div>
         </section>
 
     </div>
+
+    <!-- FEATURES -->
+    <section class="features-section">
+        <h3>Project Features</h3>
+        <div class="features-grid">
+            <div class="feature-card">😊 Emotion Detection</div>
+            <div class="feature-card">👁 Facial Attributes</div>
+            <div class="feature-card">🎂 Age Detection</div>
+            <div class="feature-card">👤 Gender Detection</div>
+            <div class="feature-card">🔍 Face Comparison</div>
+            <div class="feature-card">📦 Object Detection</div>
+            <div class="feature-card">📝 OCR / Text Detection</div>
+            <div class="feature-card">⭐ Celebrity Recognition</div>
+            <div class="feature-card">🛡 Moderation Check</div>
+        </div>
     </section>
 
-<section class="features-section">
+    <footer>
+        Built with ❤️ using AI and AWS Rekognition
+        by PRACHI BHADANA
+    </footer>
 
-    <h3>Project Features</h3>
+    <script src="script.js"></script>
 
-    <div class="features-grid">
-
-        <div class="feature-card">
-            ✔ Face Detection
-        </div>
-
-        <div class="feature-card">
-            ✔ Object Detection
-        </div>
-
-        <div class="feature-card">
-            ✔ OCR/Text Detection
-        </div>
-
-        <div class="feature-card">
-            ✔ Celebrity Recognition
-        </div>
-
-        <div class="feature-card">
-            ✔ Moderation Check
-        </div>
-
-    </div>
-
-</section>
-
-</div>
-
-<script src="script.js"></script>
-
-<footer>
-    Built with ❤️ using AI and AWS Rekognition
-</footer>
 </body>
 </html>
