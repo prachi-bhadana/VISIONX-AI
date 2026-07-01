@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 import boto3
 
+
 from aws_config import AWS_ACCESS_KEY, AWS_SECRET_KEY, AWS_REGION
 
 app = FastAPI()

@@ -1,8 +1,4 @@
 fastapi
 uvicorn
 boto3
-python-dotenv
 python-multipart
-jinja2
-pillow
-aiofiles
