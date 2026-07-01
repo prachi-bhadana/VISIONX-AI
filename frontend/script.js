@@ -8,7 +8,7 @@ const previewImage2    = document.getElementById("previewImage2");
 const secondImageWrap  = document.getElementById("secondImageWrap");
 const ageInputWrap     = document.getElementById("ageInputWrap");
 
-const BASE_URL = "http://visionx-ai.onrender.com";
+const BASE_URL = window.location.origin;
 
 /* =====================
    IMAGE PREVIEW — IMAGE 1

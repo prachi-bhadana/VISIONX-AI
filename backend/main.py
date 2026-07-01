@@ -1,11 +1,18 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
 import boto3
 
 
 from aws_config import AWS_ACCESS_KEY, AWS_SECRET_KEY, AWS_REGION
 
 app = FastAPI()
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FRONTEND_DIR = os.path.join(BASE_DIR, "..", "frontend")
+
+app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
 # CORS
 app.add_middleware(
@@ -26,6 +33,11 @@ rekognition = boto3.client(
 
 
 # ✅ EXISTING - Analyze Image (Labels)
+@app.get("/")
+async def home():
+    return FileResponse(os.path.join(FRONTEND_DIR, "index.html"))
+
+
 @app.post("/analyze")
 async def analyze_image(image: UploadFile = File(...)):
     image_bytes = await image.read()
