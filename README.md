@@ -2,7 +2,7 @@
 
 AI-powered image analysis web application built using AWS Rekognition, FastAPI, HTML, CSS, and JavaScript.
 
----
+----
 
 ## ✨ Features
 
